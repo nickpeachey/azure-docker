@@ -35,7 +35,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/azure-docker-api:latest, ${{ secrets.DOCKER_USERNAME }}/azure-docker-api:${{ github.run_number }}
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/azure-docker-api:latest, ${{ secrets.DOCKERHUB_USERNAME }}/azure-docker-api:${{ github.run_number }}
           build-args: |
             BUILD_DATE=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
             VCS_REF=$(git rev-parse --short HEAD)
